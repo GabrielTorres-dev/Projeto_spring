@@ -134,3 +134,28 @@ public class ReservaService {
         return dto;
     }
 }
+// RESUMO ESTATÍSTICO
+public Object resumo() {
+
+    List<Reserva> reservas = reservaRepository.findAll();
+
+    int total = reservas.size();
+
+    double duracaoMedia = reservas.stream()
+            .mapToDouble(r -> java.time.Duration.between(r.getHoraInicio(), r.getHoraFim()).toHours())
+            .average()
+            .orElse(0);
+
+    double receitaTotal = reservas.stream()
+            .mapToDouble(r -> {
+                long horas = java.time.Duration.between(r.getHoraInicio(), r.getHoraFim()).toHours();
+                return horas * r.getEspaco().getValorHora();
+            })
+            .sum();
+
+    return new java.util.HashMap<String, Object>() {{
+        put("totalReservas", total);
+        put("duracaoMediaHoras", duracaoMedia);
+        put("receitaTotal", receitaTotal);
+    }};
+}
