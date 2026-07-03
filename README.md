@@ -3,6 +3,8 @@ Projeto da material de sexta feira, construir uma api em java com seus framework
 
 
 
-Alunos:......................../................ RGM.............../
+Alunos:......................./................ RGM.............../
+
+Gabriel torres Toams RGM: 43070400.
 
 Pedro Henrique de Araújo Nunes/....... 43004831.................../
