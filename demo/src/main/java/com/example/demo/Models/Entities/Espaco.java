@@ -1,7 +1,9 @@
-package com.example.demo.models.entities;
+package com.example.demo.Models.Entities;
 
 import java.util.List;
 
+import com.example.demo.Models.Entities.Filial;
+import com.example.demo.Models.Entities.Reserva;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

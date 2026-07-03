@@ -1,8 +1,8 @@
-package com.example.demo.repositories;
+package com.example.demo.Repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.demo.models.entities.Filial;
+import com.example.demo.Models.Entities.Filial;
 
 public interface FilialRepository extends JpaRepository<Filial, Long> {
 }

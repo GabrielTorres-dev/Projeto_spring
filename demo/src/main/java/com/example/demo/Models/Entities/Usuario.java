@@ -1,7 +1,8 @@
-package com.example.demo.models.entities;
+package com.example.demo.Models.Entities;
 
 import java.util.List;
 
+import java.util.Optional;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,6 +16,7 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 @Entity
 @Table(name = "usuarios")
@@ -44,8 +46,14 @@ public class Usuario {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "endereco_id")
-    private Endereco endereco;
+    private com.example.demo.Models.Entities.Endereco endereco;
 
     @OneToMany(mappedBy = "usuario")
-    private List<Reserva> reservas;
+    private List<com.example.demo.Models.Entities.Reserva> reservas;
+
+    public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+        Optional<Usuario> findByEmail(String email);
+        boolean existsByEmail(String email);
+    }
+
 }

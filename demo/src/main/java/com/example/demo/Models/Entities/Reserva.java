@@ -1,8 +1,9 @@
-package com.example.demo.models.entities;
+package com.example.demo.Models.Entities;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+import com.example.demo.Models.Entities.Usuario;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -41,5 +42,5 @@ public class Reserva {
 
     @ManyToOne
     @JoinColumn(name = "espaco_id", nullable = false)
-    private Espaco espaco;
+    private com.example.demo.Models.Entities.Espaco espaco;
 }
