@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.models.dto.EnderecoDTO;
+import com.example.demo.Models.dto.EnderecoDTO;
 import com.example.demo.services.EnderecoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

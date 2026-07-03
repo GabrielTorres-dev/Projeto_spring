@@ -42,5 +42,5 @@ public class Reserva {
 
     @ManyToOne
     @JoinColumn(name = "espaco_id", nullable = false)
-    private com.example.demo.models.entities.Espaco espaco;
+    private com.example.demo.Models.Entities.Espaco espaco;
 }

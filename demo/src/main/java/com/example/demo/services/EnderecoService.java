@@ -1,6 +1,6 @@
 package com.example.demo.services;
 
-import com.example.demo.models.dto.EnderecoDTO;
+import com.example.demo.Models.dto.EnderecoDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

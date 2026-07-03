@@ -1,4 +1,4 @@
-package com.example.demo.models.dto;
+package com.example.demo.Models.dto;
 
 import lombok.Data;
 
@@ -10,4 +10,6 @@ public class UsuarioDTO {
     private String email;
     private String telefone;
     private EnderecoDTO endereco;
+
+
 }

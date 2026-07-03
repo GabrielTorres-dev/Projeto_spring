@@ -1,4 +1,4 @@
-package com.example.demo.models.dto;
+package com.example.demo.Models.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -18,4 +18,13 @@ public class EspacoFormDTO {
 
     @NotNull
     private Long filialId;
+
+    @Data
+    public static class FilialDTO {
+
+        private Long id;
+        private String nome;
+        private String cidade;
+        private String estado;
+    }
 }

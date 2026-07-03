@@ -30,5 +30,5 @@ public class Filial {
     private String estado;
 
     @OneToMany(mappedBy = "filial")
-    private List<com.example.demo.models.entities.Espaco> espacos;
+    private List<com.example.demo.Models.Entities.Espaco> espacos;
 }
