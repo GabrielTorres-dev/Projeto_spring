@@ -1,4 +1,4 @@
-package com.example.demo.models.entities;
+package com.example.demo.Models.Entities;
 
 import java.util.List;
 
@@ -30,5 +30,5 @@ public class Filial {
     private String estado;
 
     @OneToMany(mappedBy = "filial")
-    private List<Espaco> espacos;
+    private List<com.example.demo.models.entities.Espaco> espacos;
 }

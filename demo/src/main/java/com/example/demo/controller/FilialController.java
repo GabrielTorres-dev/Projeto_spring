@@ -1,4 +1,4 @@
 package com.example.demo.controller;
 
-public class FilialControle {
+public class FilialController {
 }

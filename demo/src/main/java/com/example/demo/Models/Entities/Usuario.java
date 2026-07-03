@@ -1,4 +1,4 @@
-package com.example.demo.models.entities;
+package com.example.demo.Models.Entities;
 
 import java.util.List;
 
@@ -44,8 +44,8 @@ public class Usuario {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "endereco_id")
-    private Endereco endereco;
+    private com.example.demo.models.entities.Endereco endereco;
 
     @OneToMany(mappedBy = "usuario")
-    private List<Reserva> reservas;
+    private List<com.example.demo.models.entities.Reserva> reservas;
 }
